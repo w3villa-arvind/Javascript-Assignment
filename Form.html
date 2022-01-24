@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <script>
+        function validationForm(){
+            var name=document.myform.name.value;
+            var password=document.myform.password.value;
+            if(name==null || name==""){
+                 alert("Name can't be blank")
+            }
+            else if(password<6){
+                alert("password must be at least 6 characters long")
+            }
+            else if (password==confirmpassword){
+              return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <style>
+        input{
+            display: flex;
+            margin: 25px auto;
+            padding: 15px;
+        
+            width: 50%;
+            font-size: 25px;
+            border-radius: 25px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: lightblue;
+        }
+        .formgroup{
+            justify-content: center;
+            text-align: center;
+            margin-top: 80px;
+        
+        }
+        button{
+            font-size: 20px;
+            padding: 8px 15px;
+            border-radius: 25px;
+            
+        }
+        h1{
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+    </style>
+
+    <h1 >Please Fill The Form To Create Login Account</h1>
+    <form autocomplete="off" name="myForm" action="action_page.php" method="post" onsubmit="return validateform()">
+    <div class="formgroup">
+     <input type="text" name="Name" id="Name" placeholder="Enter First name" >
+     <input type="text" name="Name" id="Name" placeholder="Enter First name" >
+     <input type="email" name="email" id="email" placeholder="Enter your Email">
+     <input type="text" name="userId" id="userId" placeholder="Enter your user Id" >
+     <input type="password" name="password" id="password" placeholder="Enter a password">
+     <input type="password" name=" confirmpassword" id=" confirmpassword" placeholder="Confirm Password">
+     <button type="submit">Submit</button>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number</title>
+</head>
+<body>
+    <body style="justify-content: center ; text-align: center;">
+        <h1>Javascript Program</h1>
+    <script>
+    let rev = 0;
+let num = 9807;
+let rem;
+
+while(num != 0){
+	rem = num % 10;
+  rev = rev + rem;
+  num = Math.floor(num/10);
+}
+
+console.log("Reverse number : "+rev);
+    </script>
+</body>
+</html>
